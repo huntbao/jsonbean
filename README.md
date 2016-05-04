@@ -46,7 +46,7 @@ Output:
 
 ```json
 {
-   "class": "User",
+   "name": "User",
    "description": "User bean",
    "attributes": [
       {
