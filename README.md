@@ -1,5 +1,5 @@
 # jsonbean
-extract datatypes from java bean files.
+Extract datatypes from java bean files using [pegjs](http://pegjs.org/).
 
 ## Installation
 
@@ -21,10 +21,10 @@ If you want to use it in browser, download `src/jsonbean.pegjs`, use `pegjs` to 
 First, you should install pegjs:
 
 ```bash
-$ npm install -g jsonbean
+$ npm install -g pegjs
 ```
 
-Then, for example, browser global variable is `window.jsonbean`, run command as follows:
+Then, for example, the browser global variable you wanted is `window.jsonbean`, run command as follows:
 
 ```bash
 $ pegjs -e window.jsonbean jsonbean.pegjs
