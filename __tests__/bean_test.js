@@ -12,7 +12,7 @@ describe('Java bean parse tests', function () {
     var str = fs.readFileSync('./__tests__/case_1.java', 'utf8');
     var result = jsonbean.parse(str)
 
-    assert.equal('User', result.class)
+    assert.equal('User', result.name)
     assert.equal('User bean', result.description)
     assert.equal(4, result.attributes.length)
 
@@ -48,7 +48,7 @@ describe('Java bean parse tests', function () {
     var str = fs.readFileSync('./__tests__/case_2.java', 'utf8');
     var result = jsonbean.parse(str)
 
-    assert.equal('User', result.class)
+    assert.equal('User', result.name)
     assert.equal('User bean', result.description)
     assert.equal(4, result.attributes.length)
 
@@ -84,7 +84,7 @@ describe('Java bean parse tests', function () {
     var str = fs.readFileSync('./__tests__/case_3.java', 'utf8');
     var result = jsonbean.parse(str)
 
-    assert.equal('User', result.class)
+    assert.equal('User', result.name)
     assert.equal('User bean', result.description)
     assert.equal(4, result.attributes.length)
 
@@ -120,7 +120,7 @@ describe('Java bean parse tests', function () {
     var str = fs.readFileSync('./__tests__/case_4.java', 'utf8');
     var result = jsonbean.parse(str)
 
-    assert.equal('User', result.class)
+    assert.equal('User', result.name)
     assert.equal('User bean', result.description)
     assert.equal(4, result.attributes.length)
 

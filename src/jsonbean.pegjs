@@ -1,14 +1,14 @@
 Start
     = items:(Statement*) {
         let result = {
-            class: '',
+            name: '',
             description: '',
             attributes: []
         }
         items.forEach((item) => {
             if (item === null) return;
             if (item.class) {
-                result.class = item.class
+                result.name = item.class
                 result.description = item.description
             } else if (item.name) {
                 result.attributes.push(item)
