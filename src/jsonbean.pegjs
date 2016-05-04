@@ -52,7 +52,7 @@ Statement
 DataType
 	= "List" _ "<" w:(Word) _ ">" {
     	return {
-        	name: w,
+            name: w,
             isArray: true
         }
     }
@@ -64,7 +64,7 @@ DataType
     }
 
 DefaultValue
-	= _ "=" _ w:(Word) {
+    = _ "=" _ w:(Word) {
     	return w
     }
 
@@ -85,11 +85,11 @@ CommentEnd
 AnyWithoutCommentEnd
     = c:(!"*/" .)* {
         let comments = c.map((item) => {
-        	return item[1]
+            return item[1]
         }).join('').split('\n')
         let result = []
         comments.forEach((comment) => {
-        	let trimResult = comment.trim().replace(/^\*+|\*+$/g, '').trim()
+            let trimResult = comment.trim().replace(/^\*+|\*+$/g, '').trim()
             if (trimResult) {
             	result.push(trimResult)
             }
