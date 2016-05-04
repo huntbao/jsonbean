@@ -1,25 +1,41 @@
 # jsonbean
-extract datatypes from java bean
+extract datatypes from java bean files.
 
 ## Installation
 
 Node.js:
 
 ```bash
-$ npm install -g jsonbean
+$ npm install jsonbean --save
 ```
 
 ## Usage
 ```js
-let beanStr = 'SOME JAVA BEAN';
-let result = jsonbean.parse(beanStr);
+let jsonbean = require('jsonbean')
+let beanStr = 'SOME JAVA BEAN String'
+let result = jsonbean.parse(beanStr)
 ```
 
+If you want to use it in browser, download `src/jsonbean.pegjs`, use `pegjs` to compile it. 
+
+First, you should install pegjs:
+
+```bash
+$ npm install -g jsonbean
+```
+
+Then, for example, browser global variable is `window.jsonbean`, run command as follows:
+
+```bash
+$ pegjs -e window.jsonbean jsonbean.pegjs
+```
+
+
 ## Example
-Input:
+Input java bean string:
 
 ```java
-package com.netease.test;
+package com.example.test;
 
 import java.util.List;
 
@@ -42,7 +58,7 @@ public class User {
 }
 ```
 
-Output:
+Output json:
 
 ```json
 {
