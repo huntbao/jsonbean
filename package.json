@@ -1,0 +1,24 @@
+{
+  "name": "jsonbean",
+  "version": "1.0.0",
+  "description": "extract datatypes from java bean",
+  "main": "./dist/jsonbean.js",
+  "scripts": {
+    "build": "pegjs ./src/jsonbean.pegjs ./src/jsonbean.js | node gulpfile.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://huntbao@github.com/huntbao/jsonbean.git"
+  },
+  "author": "HuntBao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/huntbao/jsonbean/issues"
+  },
+  "homepage": "https://github.com/huntbao/jsonbean#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-mocha": "^2.2.0",
+    "mocha": "^2.4.5"
+  }
+}
