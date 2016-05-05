@@ -1,8 +1,8 @@
 {
   "name": "jsonbean",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "extract datatypes from java bean",
-  "main": "./dist/jsonbean.js",
+  "main": "./src/jsonbean.js",
   "scripts": {
     "build": "pegjs ./src/jsonbean.pegjs ./src/jsonbean.js | node gulpfile.js"
   },
