@@ -50,7 +50,7 @@ Statement
     }
 
 DataType
-	= "List" _ "<" w:(Word) _ ">" {
+    = "List" _ "<" w:(Word) _ ">" {
     	return {
             name: w,
             isArray: true
@@ -58,7 +58,7 @@ DataType
     }
     / w:(Word) {
     	return {
-        	name: w,
+            name: w,
             isArray: false
         }
     }
