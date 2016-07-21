@@ -38,7 +38,7 @@
           peg$startRuleFunction  = peg$parseStart,
 
           peg$c0 = function(items) {
-            let result = {
+            var  result = {
               name: '',
               description: '',
               attributes: []
@@ -135,12 +135,12 @@
           peg$c38 = { type: "literal", value: "*/", description: "\"*/\"" },
           peg$c39 = { type: "any", description: "any character" },
           peg$c40 = function(c) {
-            let comments = c.map((item) => {
+            var  comments = c.map((item) => {
               return item[1]
             }).join('').split('\n')
-            let result = []
+            var  result = []
             comments.forEach((comment) => {
-              let trimResult = comment.trim().replace(/^\*+|\*+$/g, '').trim()
+              var  trimResult = comment.trim().replace(/^\*+|\*+$/g, '').trim()
               if (trimResult) {
                 result.push(trimResult)
               }
