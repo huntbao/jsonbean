@@ -18,7 +18,7 @@ Start
     }
 
 Statement
-    = _ "private" __ dt:(DataType) __ name:(Character+) dv:(DefaultValue*) ";" ct:(Comment*) {
+    = _ dtm:(DataTypeModifier) __ dt:(DataType) __ name:(Character+) dv:(DefaultValue*) ";" ct:(Comment*) {
         return {
             name: name.join(''),
             type: dt.name,
@@ -27,7 +27,7 @@ Statement
             description: ct.join('')
         }
     }
-    / ct:(Comment*) _ "private" __ dt:(DataType) __ name:(Character+) dv:(DefaultValue*) ";" LB* {
+    / ct:(Comment*) _ "private" __ dtm:(DataTypeModifier) __ name:(Character+) dv:(DefaultValue*) ";" LB* {
         return {
             name: name.join(''),
             type: dt.name,
@@ -62,6 +62,11 @@ DataType
             isArray: false
         }
     }
+
+DataTypeModifier
+	= "private"
+    / "protected"
+    / "public"
 
 DefaultValue
     = _ "=" _ w:(Word) {
