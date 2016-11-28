@@ -1,0 +1,56 @@
+{
+  "name": "User",
+  "description": "User bean",
+  "attributes": [
+    {
+      "name": "id",
+      "type": "String",
+      "isArray": false,
+      "defaultValue": "test",
+      "description": "user id"
+    },
+    {
+      "name": "ids",
+      "type": "String",
+      "isArray": true,
+      "defaultValue": ["test1", "test2", "test3"],
+      "description": "test ids"
+    },
+    {
+      "name": "ids2",
+      "type": "String",
+      "isArray": true,
+      "defaultValue": ["test1", "test2", "test3"],
+      "description": "test ids2"
+    },
+
+    {
+      "name": "name",
+      "type": "String",
+      "isArray": false,
+      "defaultValue": "",
+      "description": "user name"
+    },
+    {
+      "name": "age",
+      "type": "Integer",
+      "isArray": false,
+      "defaultValue": 10,
+      "description": "user age"
+    },
+    {
+      "name": "ages",
+      "type": "Integer",
+      "isArray": true,
+      "defaultValue": [1, 2, 3,4],
+      "description": "test ages"
+    },
+    {
+      "name": "privileges",
+      "type": "String",
+      "isArray": true,
+      "defaultValue": "",
+      "description": "user privileges"
+    }
+  ]
+}

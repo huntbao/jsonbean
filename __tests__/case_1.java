@@ -9,7 +9,12 @@ public class User {
 	/*
 	 * user id
 	 */
-	private String id;
+	private String id = "test";
+
+    // test ids
+	private String[] ids = ["test1", "test2", "test3"];
+
+    private String ids2[] = ["test1", "test2", "test3"]; // test ids2
 	/*
 	 * user name
 	 */
@@ -18,6 +23,10 @@ public class User {
 	 * user age
 	 */
 	private Integer age = 10;
+
+	// test ages
+	private Integer[] ages = [1,2,3,4];
+
 	/*
 	 * user privileges
 	 */

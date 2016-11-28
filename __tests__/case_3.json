@@ -1,0 +1,34 @@
+{
+  "name": "User",
+  "description": "User bean",
+  "attributes": [
+    {
+      "name": "id",
+      "type": "String",
+      "isArray": false,
+      "defaultValue": "",
+      "description": "user id"
+    },
+    {
+      "name": "name",
+      "type": "String",
+      "isArray": false,
+      "defaultValue": "",
+      "description": "user name"
+    },
+    {
+      "name": "age",
+      "type": "Integer",
+      "isArray": false,
+      "defaultValue": "10",
+      "description": "user age"
+    },
+    {
+      "name": "privileges",
+      "type": "String",
+      "isArray": true,
+      "defaultValue": "",
+      "description": "user privileges"
+    }
+  ]
+}
