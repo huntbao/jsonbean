@@ -9,12 +9,13 @@ public class User {
 
 
 	private String name; // user name
+    //user age
 
 
-	private Integer age = 10; // user age
+	private Integer age = 10; // this one will be overriden by the 'user age'
 
-
-	private List<String> privileges; // user privileges
+    //user privileges
+	private List<String> privileges; /* this one wouldn't appear */
 
 	public String getId() {
 		return id;
