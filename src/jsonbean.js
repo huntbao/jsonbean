@@ -147,7 +147,7 @@
             description: '',
             attributes: []
           }
-          items.forEach((item) => {
+          items.forEach(function(item){
             if (item === null) return;
             if (item.class) {
               result.name = item.class
@@ -294,11 +294,11 @@
         peg$c59 = peg$literalExpectation("*/", false),
         peg$c60 = peg$anyExpectation(),
         peg$c61 = function(c) {
-          var comments = c.map((item) => {
+          var comments = c.map(function(item){
             return item[1]
           }).join('').split('\n')
           var result = []
-          comments.forEach((comment) => {
+          comments.forEach(function(comment){
             var trimResult = comment.trim().replace(/^\*+|\*+$/g, '').trim()
             if (trimResult) {
               result.push(trimResult)
