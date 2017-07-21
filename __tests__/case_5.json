@@ -1,0 +1,41 @@
+{
+	"name": "BarCodeVo",
+	"description": "author: hzxuwei3., date: 2017年7月10日 下午5:42:30",
+	"attributes": [
+		{
+			"name": "id",
+			"type": "long",
+			"isArray": false,
+			"defaultValue": "",
+			"description": "主键."
+		},
+		{
+			"name": "goodsNo",
+			"type": "String",
+			"isArray": false,
+			"defaultValue": "",
+			"description": "货号."
+		},
+		{
+			"name": "barCode",
+			"type": "String",
+			"isArray": false,
+			"defaultValue": "",
+			"description": "条形码."
+		},
+		{
+			"name": "enabled",
+			"type": "int",
+			"isArray": false,
+			"defaultValue": "",
+			"description": "0-不可用，1-可用"
+		},
+		{
+			"name": "memo",
+			"type": "String",
+			"isArray": false,
+			"defaultValue": "",
+			"description": "备注."
+		}
+	]
+}
