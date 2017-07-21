@@ -22,7 +22,7 @@ CommentOrLB = Comment / LB+ {
         }
 
 Statement
-    = _ ct:(Comment*) _ f:(FieldModifiers)  __ dt:(DataType) __ name:(Character+) _ arr:TraditionalArray? dv:(DefaultValueAssign?) ";" _ cl:CommentOrLB  {
+    = _ ct:(Comment*) _ Annotations? _ f:(FieldModifiers)  __ dt:(DataType) __ name:(Character+) _ arr:TraditionalArray? dv:(DefaultValueAssign?) ";" _ cl:CommentOrLB  {
         if(f){
             return null;
         }
@@ -34,7 +34,7 @@ Statement
             description: ct.join('') || cl
         }
     }
-    / ct:(Comment*) _ "public" __ "class" __ clazz:(Word) AnyWithoutTerminator "{" LB* {
+    / ct:(Comment*) _ Annotations? _ "public" __ "class" __ clazz:(Word) AnyWithoutTerminator "{" LB* {
         return {
             description: ct.join(''),
             class: clazz
@@ -69,6 +69,13 @@ DataType
         }
     }
 
+// Annotations, now only support MarkerAnnotation, see https://docs.oracle.com/javase/specs/jls/se8/html/jls-9.html#jls-Annotation
+Annotations
+	= MarkerAnnotation
+
+MarkerAnnotation
+    = _ "@" TypeName _ LB?
+TypeName = Word
 
 
 // Consistants with  https://docs.oracle.com/javase/specs/jls/se8/html/jls-8.html#jls-8.3.1.1
