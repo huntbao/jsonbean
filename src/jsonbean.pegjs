@@ -74,7 +74,7 @@ Annotations
 	= MarkerAnnotation
 
 MarkerAnnotation
-    = _ "@" TypeName _ LB?
+    = _ "@" TypeName _ LB*
 TypeName = Word
 
 

@@ -1025,7 +1025,7 @@
             }
             
             function peg$parseMarkerAnnotation() {
-                var s0, s1, s2, s3, s4, s5;
+                var s0, s1, s2, s3, s4, s5, s6;
                 
                 s0 = peg$currPos;
                 s1 = peg$parse_();
@@ -1044,9 +1044,11 @@
                         if (s3 !== peg$FAILED) {
                             s4 = peg$parse_();
                             if (s4 !== peg$FAILED) {
-                                s5 = peg$parseLB();
-                                if (s5 === peg$FAILED) {
-                                    s5 = null;
+                                s5 = [];
+                                s6 = peg$parseLB();
+                                while (s6 !== peg$FAILED) {
+                                    s5.push(s6);
+                                    s6 = peg$parseLB();
                                 }
                                 if (s5 !== peg$FAILED) {
                                     s1 = [s1, s2, s3, s4, s5];
