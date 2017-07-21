@@ -12,6 +12,7 @@ public class User {
 	private String id = "test";
 
     // test ids
+    @NotNull
 	private String[] ids = ["test1", "test2", "test3"];
 
     private String ids2[] = ["test1", "test2", "test3"]; // test ids2

@@ -27,7 +27,13 @@ $ npm install -g pegjs
 Then, for example, the browser global variable you wanted is `window.jsonbean`, run command as follows:
 
 ```bash
-$ pegjs -e window.jsonbean jsonbean.pegjs
+$ pegjs --format globals jsonbean.pegjs
+```
+
+You can run some tests defined in the `__tests__` directory by the command:
+
+```bash
+$ npm run test
 ```
 
 

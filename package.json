@@ -4,7 +4,7 @@
   "description": "extract datatypes from java bean",
   "main": "./src/jsonbean.js",
   "scripts": {
-    "build": "pegjs ./src/jsonbean.pegjs ./src/jsonbean.js | node gulpfile.js"
+    "test": "node __tests__/run_tests.js"
   },
   "repository": {
     "type": "git",
