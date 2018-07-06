@@ -19,7 +19,7 @@ Start
 
 CommentOrLB = Comment / LB+ {
 		return "" // ignore
-        }
+}
 
 Statement
     = _ ct:(Comment*) _ Annotations? _ f:(FieldModifiers)  __ dt:(DataType) __ name:(Character+) _ arr:TraditionalArray? dv:(DefaultValueAssign?) ";" _ cl:CommentOrLB  {
@@ -28,7 +28,7 @@ Statement
         }
         return {
             name: name.join(''),
-            type: dt.name,
+            typeName: dt.name,
             isArray: dt.isArray || (arr?true:false),
             defaultValue: dv == null?"":dv,
             description: ct.join('') || cl
@@ -74,11 +74,10 @@ Annotations
 	= MarkerAnnotation
 
 MarkerAnnotation
-    = _ "@" TypeName _ LB*
-TypeName = Word
+    = _ "@" AnyWithoutLB _ LB*
 
 
-// Consistants with  https://docs.oracle.com/javase/specs/jls/se8/html/jls-8.html#jls-8.3.1.1
+// Consistent with  https://docs.oracle.com/javase/specs/jls/se8/html/jls-8.html#jls-8.3.1.1
 DataTypeModifier
     = "private"
     / "protected"
@@ -147,6 +146,9 @@ DefaultValue
                 return temp.concat(vvTemp);
             }
         }
+    }
+    / [^;]*{
+        	return "";
     }
 
 
