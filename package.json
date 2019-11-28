@@ -1,6 +1,6 @@
 {
   "name": "jsonbean",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "extract datatypes from java bean",
   "main": "./src/jsonbean.js",
   "scripts": {
